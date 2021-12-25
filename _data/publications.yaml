@@ -1,22 +1,50 @@
 papers:
 
-  - title: "Engaging Politically Diverse Audiences on Social Media"
-    authors: "<b>Martin Saveski</b>, Doug Beeferman, David McClure, Deb Roy"
-    venue: "ICWSM'22: International AAAI Conference on Web and Social Media. 2022."
-    paper_pdf: "/assets/publications/2022_newsbridge/paper.pdf"
-    selected: y
+  - title: "On Learning Prediction-Focused Mixtures"
+    authors: "<b>Abhishek Sharma</b>, Catherine Zeng, Sanjana Narayanan, Sonali Parbhoo, Finale Doshi-Velez"
+    venue: "ArXiv, October 2021."
+    paper_pdf: "/assets/publications/2021_prediction_focused_mixtures_preprint/paper.pdf"
+    preprint: y
+    workshop: n
+    conf_journal: n
+
+  - title: "Prediction-focused Mixture Models"
+    authors: "Sanjana Narayanan<sup>‡</sup>, <b>Abhishek Sharma<sup>‡</sup></b>, Catherine Zeng, Finale Doshi-Velez"
+    venue: "ITR3: Information-Theoretic Methods for Rigorous, Responsible, and Reliable Machine Learning, ICML, June 2021."
+    paper_pdf: "/assets/publications/2021_prediction_focused_gmms_itr3/paper.pdf"
+    video: "https://youtu.be/kXGfW1tiRhA"
+    preprint: n
     workshop: y
+    conf_journal: n
+
+  - title: "Rate of Change Analysis for Interestingness Measures"
+    authors: "Nandan Sudarsanam, Nishanth Kumar, <b>Abhishek Sharma</b>, Balaraman Ravindran"
+    venue: "KAIS: Knowledge and Information Systems, March 2019"
+    paper_pdf: "/assets/publications/2020_rate_of_change_analysis/paper.pdf"
+    preprint: n
+    workshop: n
     conf_journal: y
 
-  - title: "Perspective-taking to Reduce Affective Polarization on Social Media"
-    authors: "<b>Martin Saveski<sup>‡</sup></b>, Nabeel Gillani<sup>‡</sup>, Ann Yuan, Prashanth Vijayaraghavan, Deb Roy"
-    venue: "ICWSM'22: International AAAI Conference on Web and Social Media. 2022."
-    paper_pdf: "/assets/publications/2022_flipfeed/paper.pdf"
-    code: "https://github.com/msaveski/twitter_perspective_taking"
-    data: "https://github.com/msaveski/twitter_perspective_taking"
-    selected: y
+  - title: "Reinforcement learning with a network of spiking agents"
+    authors: "Sneha Aenugu, <b>Abhishek Sharma</b>, Sasikiran Yelamarthi, Hananel Hazan, Philip S. Thomas, Robert Kozma"
+    venue: "Real Neurons & Hidden Units Workshop, NeurIPS, December 2019"
+    paper_pdf: "/assets/publications/2019_rl_spiking_networks/paper.pdf"
+    preprint: n
     workshop: y
-    conf_journal: y
+    conf_journal: n
+
+  - title: "Generative Sequential Stochastic Model for Marked Point Processes"
+    authors: "<b>Abhishek Sharma<sup>‡</sup></b> , Aritra Ghosh<sup>‡</sup> , Madalina Fiterau"
+    venue: "Time Series Workshop, ICML, June 2019"
+    paper_pdf: "/assets/publications/2019_marked_point_process/paper.pdf"
+    preprint: n
+    workshop: y
+    conf_journal: n
+
+#    <sup>‡</sup>
+#    <b>Abhishek Sharma</b>
+#    Catherine Zeng
+#    Finale Doshi-Velez
 
 #  - title: "The Structure of Toxic Conversations on Twitter"
 #    authors: "<b>Martin Saveski</b>, Brandon Roy, Deb Roy"

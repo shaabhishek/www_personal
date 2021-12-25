@@ -6,18 +6,24 @@ title: Home
 <div class="docs-section" id="bio">
   <h4>Bio</h4>
   <p>
-  I am a Postdoc at the department of Management Science and Engineering at Stanford University, working with <a href="https://web.stanford.edu/~jugander/" target="_blank">Johan Ugander</a>. 
-  My main research interest is in Computational Social Science.
-  I am passionate about developing new computational methods and analyzing large-scale datasets to study important social problems. 
-  My work often falls at the intersections of Social Network Analysis, Machine Learning, and Causal Inference.
+  I am Ph.D. student in the <a href="https://dtak.github.io/" target="_blank">Data to Actionable Knowledge (DTaK)</a> lab at Harvard University where I'm advised by <a href="https://finale.seas.harvard.edu/" target="_blank">Finale Doshi-Velez</a>.
+  My research interest lie in probabilistic machine learning and decision-focused modeling, and my methods are strongly motivated by applications in healthcare.
+  These interests allow me take ideas from Optimization, Probabilistic Graphical Models, Reinforcement Learning and apply to important social problems.
+  Before coming to Harvard, I got my M.S. in Computer Science from University of Massachusetts, Amherst and my B.Tech. in Engineering from IIT Madras.
   </p>
+<!--  <p>-->
+<!--  I am a Postdoc at the department of Management Science and Engineering at Stanford University, working with <a href="https://web.stanford.edu/~jugander/" target="_blank">Johan Ugander</a>. -->
+<!--  My main research interest is in Computational Social Science.-->
+<!--  I am passionate about developing new computational methods and analyzing large-scale datasets to study important social problems. -->
+<!--  My work often falls at the intersections of Social Network Analysis, Machine Learning, and Causal Inference.-->
+<!--  </p>-->
 
-  <p>
-  I completed my Ph.D. from MIT in 2020 under the supervision of Deb Roy. 
-  Before coming to MIT, I spent one year in Paris and one year in Barcelona doing a M.Sc. in Data mining and Knowledge Management. 
-  I got my B.Sc. from Staffordshire University with First Class honors in Computer Science. 
-  Throughout my graduate studies, I spent several summers doing internships in industry, including Yahoo! Labs, Amazon, LinkedIn, and Facebook.
-  </p>
+<!--  <p>-->
+<!--  I completed my Ph.D. from MIT in 2020 under the supervision of Deb Roy. -->
+<!--  Before coming to MIT, I spent one year in Paris and one year in Barcelona doing a M.Sc. in Data mining and Knowledge Management. -->
+<!--  I got my B.Sc. from Staffordshire University with First Class honors in Computer Science. -->
+<!--  Throughout my graduate studies, I spent several summers doing internships in industry, including Yahoo! Labs, Amazon, LinkedIn, and Facebook.-->
+<!--  </p>-->
 </div>
 
 
@@ -30,13 +36,15 @@ title: Home
   </p>
 
   <ul class="tab-nav">
-    <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
-    <li><div class="button" data-ref="#papers-all">All</div></li>
+    <li><div class="button active" data-ref="#papers-all">All</div></li>
+    <li><div class="button" data-ref="#papers-preprint">Preprint</div></li>
+    <li><div class="button" data-ref="#papers-conf_journal">Conference/Journal</div></li>
+    <li><div class="button" data-ref="#papers-workshop">Workshop</div></li>
   </ul>
 
   <div class="tab-content">
 
-    <div class="tab-pane" id="papers-all">
+    <div class="tab-pane active" id="papers-all">
       {% for paper in site.data.publications.papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
@@ -72,8 +80,44 @@ title: Home
       {% endfor %}
     </div>
 
+    <div class="tab-pane" id="papers-preprint">
+      {% assign preprint_papers = site.data.publications.papers | where: "preprint", "y" %}
+      {% for paper in preprint_papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
 
-    <div class="tab-pane active" id="papers-conf_journal">
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+            {% endif %}
+
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+            {% endif %}
+
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
+
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
+
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="tab-pane" id="papers-conf_journal">
       {% assign conf_journal_papers = site.data.publications.papers | where: "conf_journal", "y" %}
       {% for paper in conf_journal_papers %}
         <div class="paper">
@@ -111,7 +155,7 @@ title: Home
     </div>
 
 
-    <div class="tab-pane active" id="papers-workshop">
+    <div class="tab-pane" id="papers-workshop">
         {% assign workshop_papers = site.data.publications.papers | where: "workshop", "y" %}
         {% for paper in workshop_papers %}
           <div class="paper">
