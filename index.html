@@ -35,42 +35,6 @@ title: Home
   </ul>
 
   <div class="tab-content">
-    <div class="tab-pane active" id="papers-selected">
-      {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
-      {% for paper in selected_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-
-            {% if paper.slides %}
-              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-            {% endif %}
-
-            {% if paper.poster %}
-              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-            {% endif %}
-
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
-
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
-
-          </div>
-        </div>
-      {% endfor %}
-    </div>
 
     <div class="tab-pane" id="papers-all">
       {% for paper in site.data.publications.papers %}
@@ -107,6 +71,82 @@ title: Home
         </div>
       {% endfor %}
     </div>
+
+
+    <div class="tab-pane active" id="papers-conf_journal">
+      {% assign conf_journal_papers = site.data.publications.papers | where: "conf_journal", "y" %}
+      {% for paper in conf_journal_papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
+
+            {% if paper.slides %}
+              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+            {% endif %}
+
+            {% if paper.poster %}
+              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+            {% endif %}
+
+            {% if paper.video %}
+              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+            {% endif %}
+
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
+
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+
+    <div class="tab-pane active" id="papers-workshop">
+        {% assign workshop_papers = site.data.publications.papers | where: "workshop", "y" %}
+        {% for paper in workshop_papers %}
+          <div class="paper">
+            <p class="title"><b>{{ paper.title }}</b></p>
+            <p>{{ paper.authors }}</p>
+            <p><i>{{ paper.venue }}</i></p>
+             <div class="paper-buttons">
+              {% if paper.paper_pdf %}
+                <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+              {% endif %}
+
+              {% if paper.slides %}
+                <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+              {% endif %}
+
+              {% if paper.poster %}
+                <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+              {% endif %}
+
+              {% if paper.video %}
+                <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+              {% endif %}
+
+              {% if paper.code %}
+                <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+              {% endif %}
+
+              {% if paper.data %}
+                <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+              {% endif %}
+
+            </div>
+          </div>
+        {% endfor %}
+      </div>
   </div>
 </div>
 
@@ -213,24 +253,6 @@ title: Home
 
 
 <div class="docs-section" id="template">
-    <h4>Website Design</h4>
-    Since I made this website, many people have found this Jekyll template useful
-    <a href="https://people.csail.mit.edu/davidam/" target="_blank">[1</a>,
-    <a href="https://thashim.github.io/" target="_blank">2</a>,
-    <a href="https://pauljwright.github.io/" target="_blank">3</a>,
-    <a href="https://bayesianbrad.github.io/" target="_blank">4</a>,
-    <a href="https://ahxt.github.io/" target="_blank">5</a>,
-    <a href="https://people.csail.mit.edu/chang87/" target="_blank">6</a>,
-    <a href="https://dinacmistry.github.io/" target="_blank">7</a>,
-    <a href="https://stanniszhou.github.io/" target="_blank">8</a>,
-    <a href="http://binghongchen.net/" target="_blank">9</a>,
-    <a href="https://jirvin16.github.io/" target="_blank">10</a>,
-    <a href="https://mengliu1998.github.io/" target="_blank">11</a>].
-    <br/>
-
-    You can find all the code needed to build your website in this <a href="https://github.com/msaveski/www_personal" target="_blank">GitHub repo</a>.
-    Feel free to use it. <br/>
-
-    If you end up using it, please link to here and drop me an email.
-    I'm always happy to see people using it.
+    <h4>Acknowledgment</h4>
+    This website was built with <a href="https://jekyllrb.com/" target="_blank">jekyll</a> based on a template by <a href="https://web.stanford.edu/~msaveski/" target="_blank">Martin Saveski</a>.
 </div>
