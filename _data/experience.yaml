@@ -30,17 +30,17 @@ experiences:
   subtitle: "Built Virtual Reality Walk-throughs"
   category: "work"
 
-- place: "Sony"
-  time: "Summer 2013"
-  title: "R&D Engineer, Intern"
-  subtitle: "Vital Sensing Department"
-  category: "work"
-
 - place: "IIT Madras"
   time: "2011 - 2016"
   title: "Dual Degree Student (B.Tech. and M.Tech.)"
   subtitle: "Engineering"
   category: "school"
+
+- place: "Sony"
+  time: "Summer 2013"
+  title: "R&D Engineer, Intern"
+  subtitle: "Vital Sensing Department"
+  category: "work"
 
 #- place: "Yahoo! Labs"
 #  time: "Feb-Aug 2013"
