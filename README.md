@@ -1,4 +1,4 @@
-# Martin Saveski's Website
+# Abhishek Sharma's Website
 
 ## Updates guide
 Change one of the files in `_data`, unless you are changing the look of the website.
@@ -8,24 +8,10 @@ Test changes with:
 jekyll serve
 ```
 
-Push to the ML web directory:
-```
-rm -rf public_html
-mkdir public_html
-```
-```
-./__deploy.sh
-```
+Push to the Github Repo to see the changes reflected on the personal [website](abhishekshar.com).
 
-More info on the [Media Lab wiki](http://wiki.media.mit.edu/view/Necsys/WebPagePersonal).
-
-**Stanford links**
-- Use fetch!
-- [Basic WWW for Individual Users](https://uit.stanford.edu/service/web/centralhosting/howto_user)
-- [AFS File Transfer](https://uit.stanford.edu/service/afs/file-transfer/macintosh)
-
-
-## External Libraries
+## Acknowledgment
+- Template Credits: [ Martin Saveski](https://web.stanford.edu/~msaveski/)
 - Framework: [Jekyll](http://jekyllrb.com/)
 - CSS
   - [Skeleton](getskeleton.com)
