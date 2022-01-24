@@ -25,7 +25,7 @@ papers:
     workshop: n
     conf_journal: y
 
-  - title: "Reinforcement learning with a network of spiking agents"
+  - title: "Reinforcement Learning with a Network of Spiking Agents"
     authors: "Sneha Aenugu, <b>Abhishek Sharma</b>, Sasikiran Yelamarthi, Hananel Hazan, Philip S. Thomas, Robert Kozma"
     venue: "Real Neurons & Hidden Units Workshop, NeurIPS, December 2019"
     paper_pdf: "/assets/publications/2019_rl_spiking_networks/paper.pdf"
